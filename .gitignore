@@ -6,6 +6,7 @@
 !parsers/generatedfiles/*.py
 !parsers/generatedfiles/*.ipynb
 !parsers/parseExcel.py
+!parsers/eval.ipynb
 !corrected.csv
 !reactionsICs_w_species.xlsx
 !article
