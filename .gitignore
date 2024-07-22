@@ -14,7 +14,7 @@
 # Include the entire folder and its contents
 !articleData/
 !articleData/**
-!1dataMin/
-!1dataMin/**
 !dataXu/
 !dataXu/**
+!parsers/generatedfiles/1dataMin/
+!parsers/generatedfiles/1dataMin/**
