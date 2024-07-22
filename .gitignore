@@ -3,8 +3,9 @@
 
 # But not these files...
 !/.gitignore
-!**/*.py
-!**/*.ipynb
+!parsers/generatedfiles/*.py
+!parsers/generatedfiles/*.ipynb
+!parsers/parseExcel.py
 !corrected.csv
 !reactionsICs_w_species.xlsx
 !article
