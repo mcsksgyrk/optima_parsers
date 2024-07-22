@@ -8,6 +8,7 @@
 !parsers/parseExcel.py
 !parsers/eval.ipynb
 !corrected.csv
+!refs.csv
 !reactionsICs_w_species.xlsx
 !article
 # Include the entire folder and its contents
