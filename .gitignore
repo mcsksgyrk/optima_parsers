@@ -9,5 +9,5 @@
 !reactionsICs_w_species.xlsx
 !article
 # Include the entire folder and its contents
-!included_folder/
-!included_folder/**
+!articleData/
+!articleData/**
