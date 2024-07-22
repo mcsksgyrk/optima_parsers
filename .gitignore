@@ -13,3 +13,5 @@
 # Include the entire folder and its contents
 !articleData/
 !articleData/**
+!1dataMin/
+!1dataMin/**
