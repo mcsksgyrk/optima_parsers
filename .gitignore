@@ -1,0 +1,13 @@
+# Ignore everything
+*
+
+# But not these files...
+!/.gitignore
+!**/*.py
+!**/*.ipynb
+!corrected.csv
+!reactionsICs_w_species.xlsx
+!article
+# Include the entire folder and its contents
+!included_folder/
+!included_folder/**
