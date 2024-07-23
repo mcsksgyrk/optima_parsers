@@ -80,25 +80,26 @@ def generate_file(file_index, directory, species, bounds, source_data):
     return filename
 
 
-# Directory to save files
-output_directory = 'delle2014/suppl'
-data = pd.read_csv('./1dataMin/delle2014_dataSuppl.csv')
-treatement = ''
-# Create the directory if it does not exist
-if not os.path.exists(output_directory):
-    os.makedirs(output_directory)
-
-# Variables and bounds from file file
-df = pd.read_excel('../../reactionsICs_w_species.xlsx', header=None,
-                   sheet_name='ics', usecols="A:B")
-bounds = generateBounds(df)
-species = getSpecies('../../refs.csv')
-
-# df to save generated IC sets
-allICs = pd.DataFrame(index=species)
-# data files
-start = time.time()
-for i in range(1, 10001):
-    file_index = i
-    generate_file(file_index, output_directory, species, bounds, data)
-print("job finished in:", time.time()-start)
+## Directory to save files
+#output_directory = 'delle2014/suppl'
+#data = pd.read_csv('./1dataMin/delle2014_dataSuppl.csv')
+#treatement = ''
+## Create the directory if it does not exist
+#if not os.path.exists(output_directory):
+#    os.makedirs(output_directory)
+#
+## Variables and bounds from file file
+#df = pd.read_excel('../../reactionsICs_w_species.xlsx', header=None,
+#                   sheet_name='ics', usecols="A:B")
+#bounds = generateBounds(df)
+#species = getSpecies('../../refs.csv')
+#
+## df to save generated IC sets
+#allICs = pd.DataFrame(index=species)
+## data files
+#start = time.time()
+#for i in range(1, 10001):
+#    file_index = i
+#    generate_file(file_index, output_directory, species, bounds, data)
+#print("job finished in:", time.time()-start)
+#
