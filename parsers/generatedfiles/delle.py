@@ -45,15 +45,8 @@ def generateFileName(file_index, directory, maxdigit=4):
 
 
 # Define the function to generate a file with given content
-def generate_file(file_index, directory, species, bounds, source_data):
-   # sigmas_non_scaled = {'mTORa': 0.17878573914637977,
-   #                      'AKTa': 0.18604569416239872,
-   #                      'AMPKa': 0.14158496278501073}
-    sigmas_non_scaled = {'mTORa': 0.23498394810272363,
-                         'TSCa': 0.18381371460154958,
-                         'AKTa': 0.2646293403942731,
-                         'AMPKa': 0.2969378196038133}
-
+def generate_file(file_index, directory, species, bounds, source_data, sigmas_non_scaled):
+   
     origi_ics = generateICs(species, bounds, True)
     scaled_sigmas = sigmas_non_scaled.copy()
     for k, v in sigmas_non_scaled.items():
