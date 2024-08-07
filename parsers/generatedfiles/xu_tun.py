@@ -8,7 +8,7 @@ import numpy as np
 
 def scaleData(source_data, variables, ics):
     dataDf = source_data.copy()
-    dataDf.time = source_data.time*60
+    dataDf.time = source_data.time
     for v in variables:
         if v == 'caspasea':
             dataDf[v] = dataDf[v]*ics['caspase']

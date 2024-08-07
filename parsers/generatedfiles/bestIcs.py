@@ -25,13 +25,12 @@ def readOutICs(path):
 
 
 file_list = pd.read_csv("minVals.csv", header=None)[0].to_list()
-
 best_sims = []
 for file in file_list:
     f_name = find_files('./', file)
     if f_name:
         best_sims.append(f_name[0])
-
+best_sims
 all_ics = []
 for sim in best_sims:
     all_ics.append(readOutICs(sim))
@@ -47,7 +46,7 @@ max_dif = max_ics - min_ics
 
 tets.loc[len(tets)] = max_dif
 tets.rename(index={2: 'dif'}, inplace=True)
-tets.to_csv('min_and_max.csv')
+tets.to_csv('atp.csv')
 
 unique_vals_sorted = max_dif.sort_values().unique()
 unique_vals_sorted
