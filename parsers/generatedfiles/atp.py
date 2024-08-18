@@ -31,7 +31,7 @@ def generateOutput(ics, variables, dataPoints):
     file_loader = jinja2.FileSystemLoader('../../dataXu')
     env = jinja2.Environment(loader=file_loader)
     template = env.get_template('data_no_sigma.xml')
-    ics['ATP'] = 3.000000*10**(-6)
+    ics['ATP'] = 3.000000*10**(6)
     output = template.render(ics=ics, variables=variables,
                              dataPoints=dataPoints)
     return output

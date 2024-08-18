@@ -63,6 +63,7 @@ def generateICs(species, bounds, goLow=False):
                 to_file[s+'a'] = ic_a
         # ezeknek a kezdeti értéke nem változik
         to_file['REF'] = 1.0
+        to_file['Glu_out'] = 1e-06
     return to_file
 
 
