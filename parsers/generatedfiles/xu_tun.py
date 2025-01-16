@@ -31,7 +31,6 @@ def compileDataTable(ics, variables, source_data):
 
 
 def generateOutput(ics, variables, dataPoints, sigmas):
-    ics['STS'] = 2000*10**(-12)
     file_loader = jinja2.FileSystemLoader('../../dataXu')
     env = jinja2.Environment(loader=file_loader)
     template = env.get_template('data_test1.xml')
@@ -43,7 +42,7 @@ def generateOutput(ics, variables, dataPoints, sigmas):
 
 def generateFileName(file_index, directory, maxdigit=4):
     padded_number = str(file_index).zfill(maxdigit)
-    file_name = 'xu2014_'+'tun2000'+'_'+padded_number+'.xml'
+    file_name = 'xu2014_'+'sts2500'+'_'+padded_number+'.xml'
     path = os.path.join(directory, file_name)
     return path
 
@@ -74,6 +73,8 @@ def generate_file(file_index, directory, species, bounds, source_data, sigmas):
                     ics['caspase'] = origi_ics['caspase']-ics['caspasea']
                 vars_to_xml.append(v)
 
+    ics['Insulin'] = 1e-10
+    ics['SERCA'] = 1e-12
     output = generateOutput(ics, vars_to_xml, dataPoints, scaled_sigmas)
     filename = generateFileName(file_index, directory)
 
@@ -84,8 +85,8 @@ def generate_file(file_index, directory, species, bounds, source_data, sigmas):
 
 
 # Directory to save files
-output_directory = 'xu/tun2000'
-data = pd.read_csv('./1dataMin/dataXu_tun2000nm.csv')
+output_directory = '/home/nvme/Opt/5_Bence/xml/xu2014/sts2500'
+data = pd.read_csv('./1dataMin/dataXu_sts2500nM.csv')
 treatement = ''
 # Create the directory if it does not exist
 if not os.path.exists(output_directory):

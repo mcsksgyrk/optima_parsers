@@ -31,6 +31,9 @@
             {%- for k,v in ics.items() %}
             <component><speciesLink preferredKey="{{k}}"         chemName="{{k}}"     /><amount units="mole fraction" >{{v}}</amount></component>
             {%- endfor %}
+            {%- for k,v in inputs.items() %}
+            <component><speciesLink preferredKey="{{k}}"         chemName="{{k}}"     /><amount units="mole fraction" >{{v}}</amount></component>
+            {%- endfor %}
         </property>
         {% if relsigmas %}
             {%- for k,v in relsigmas.items() %}
